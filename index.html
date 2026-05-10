@@ -1,170 +1,96 @@
 <!DOCTYPE html>
-<html lang="bs">
+<html lang="hr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bruda Web</title>
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
-
-    body{
-      background:#0f172a;
-      color:white;
-      overflow-x:hidden;
-    }
-
-    header{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      text-align:center;
-      background:linear-gradient(135deg,#0f172a,#1e293b);
-    }
-
-    h1{
-      font-size:70px;
-      margin-bottom:15px;
-      animation:fade 1s ease;
-    }
-
-    p{
-      font-size:20px;
-      color:#cbd5e1;
-      margin-bottom:25px;
-    }
-
-    button{
-      padding:15px 35px;
-      border:none;
-      border-radius:12px;
-      background:#3b82f6;
-      color:white;
-      font-size:18px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    button:hover{
-      transform:scale(1.08);
-      background:#2563eb;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-      padding:80px 10%;
-    }
-
-    .card{
-      background:#1e293b;
-      padding:30px;
-      border-radius:20px;
-      transition:0.3s;
-      box-shadow:0 0 20px rgba(0,0,0,0.3);
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-    }
-
-    .card h2{
-      margin-bottom:10px;
-      color:#60a5fa;
-    }
-
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#020617;
-      color:#94a3b8;
-    }
-
-    @keyframes fade{
-      from{
-        opacity:0;
-        transform:translateY(40px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-
-    .popup{
-      position:fixed;
-      top:20px;
-      right:-400px;
-      background:#22c55e;
-      padding:20px;
-      border-radius:12px;
-      transition:0.5s;
-      font-weight:bold;
-    }
-
-    .show{
-      right:20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Bruda | Najbolji roštilj u gradu</title>
+    <meta name="description" content="Pogledajte naš digitalni meni. Vrhunska pizza, roštilj i domaća jela. Posjetite nas ili naručite odmah!">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=500&q=80');
+            background-size: cover;
+            padding: 50px 20px;
+        }
+        h1 { margin: 0; font-size: 2.5rem; color: #ffcc00; }
+        .menu-section { padding: 20px; }
+        .item {
+            background: #2a2a2a;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #ffcc00;
+        }
+        .item-info { text-align: left; }
+        .price { font-weight: bold; color: #ffcc00; font-size: 1.2rem; }
+        
+        /* Dugme koje zamjenjuje tvoje staro "Klikni me" */
+        .call-btn {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: black;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="popup" id="popup">
-    Dobrodošao Bruda 😎
-  </div>
-
-  <header>
-    <h1>Moja Brutalna Stranica</h1>
-    <p>HTML • CSS • JavaScript</p>
-
-    <button onclick="showMessage()">
-      Klikni me
-    </button>
-  </header>
-
-  <section class="cards">
-
-    <div class="card">
-      <h2>Brz Design</h2>
-      <p>Moderna stranica sa animacijama i efektima.</p>
+    <div class="header">
+        <h1>RESTORAN BRUDA</h1>
+        <p>Tradicionalna kuhinja & moderan ambijent</p>
     </div>
 
-    <div class="card">
-      <h2>JavaScript</h2>
-      <p>Dugme pokreće popup i interakciju.</p>
+    <div class="menu-section">
+        <h2>Danas izdvajamo:</h2>
+        
+        <div class="item">
+            <div class="item-info">
+                <strong>Teleći Ćevapi</strong>
+                <div style="font-size: 0.8rem; color: #aaa;">10 komada, somun, luk</div>
+            </div>
+            <div class="price">12 KM</div>
+        </div>
+
+        <div class="item">
+            <div class="item-info">
+                <strong>Pizza Capricciosa</strong>
+                <div style="font-size: 0.8rem; color: #aaa;">Šunka, sir, gljive, pelat</div>
+            </div>
+            <div class="price">10 KM</div>
+        </div>
+
+        <div class="item">
+            <div class="item-info">
+                <strong>Domaća Limunada</strong>
+                <div style="font-size: 0.8rem; color: #aaa;">Svježe cijeđena, 0.3l</div>
+            </div>
+            <div class="price">4 KM</div>
+        </div>
+
+        <a href="tel:+38761123456" class="call-btn">Rezerviši stol odmah</a>
     </div>
 
-    <div class="card">
-      <h2>Responsive</h2>
-      <p>Radi i na telefonu i na računaru.</p>
-    </div>
-
-  </section>
-
-  <footer>
-    Napravio Halid 💙
-  </footer>
-
-  <script>
-    function showMessage(){
-      let popup = document.getElementById("popup");
-
-      popup.classList.add("show");
-
-      setTimeout(() => {
-        popup.classList.remove("show");
-      }, 3000);
-    }
-  </script>
+    <footer style="padding: 20px; font-size: 0.8rem; color: #666;">
+        &copy; 2026 Restoran Bruda. Powered by halidomc17-ctrl
+    </footer>
 
 </body>
 </html>
