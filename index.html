@@ -3,93 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restoran Bruda | Najbolji roštilj u gradu</title>
-    <meta name="description" content="Pogledajte naš digitalni meni. Vrhunska pizza, roštilj i domaća jela. Posjetite nas ili naručite odmah!">
+    <title>Restoran Ukus Tešanj | Tradicija i Kvalitet</title>
+    <meta name="description" content="Dobrodošli u Restoran Ukus Tešanj. Pogledajte naš digitalni meni, specijalitete sa roštilja i rezervišite svoj stol online.">
     
     <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #121212;
+            --light: #f4f4f4;
+        }
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
         }
-        .header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=500&q=80');
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80');
             background-size: cover;
-            padding: 50px 20px;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
         }
-        h1 { margin: 0; font-size: 2.5rem; color: #ffcc00; }
-        .menu-section { padding: 20px; }
-        .item {
-            background: #2a2a2a;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 400px;
+        .hero h1 { font-size: 2.5rem; margin: 0; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
+        
+        .container { padding: 20px; max-width: 600px; margin: auto; }
+        
+        .section-title {
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .menu-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            border-left: 5px solid #ffcc00;
+            margin-bottom: 15px;
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            transition: 0.3s;
         }
-        .item-info { text-align: left; }
-        .price { font-weight: bold; color: #ffcc00; font-size: 1.2rem; }
-        
-        /* Dugme koje zamjenjuje tvoje staro "Klikni me" */
+        .menu-item:active { transform: scale(0.98); }
+        .item-details b { display: block; font-size: 1.1rem; }
+        .item-details span { font-size: 0.8rem; color: #888; }
+        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+
+        .cta-box {
+            position: sticky;
+            bottom: 20px;
+            padding: 0 20px;
+        }
         .call-btn {
-            display: inline-block;
-            background-color: #ffcc00;
+            display: block;
+            background: var(--gold);
             color: black;
-            padding: 15px 30px;
+            text-align: center;
+            padding: 18px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
-            margin-top: 20px;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>RESTORAN BRUDA</h1>
-        <p>Tradicionalna kuhinja & moderan ambijent</p>
+    <div class="hero">
+        <h1>Restoran Ukus</h1>
+        <p>Tešanj • Tradicija • Kvalitet</p>
     </div>
 
-    <div class="menu-section">
-        <h2>Danas izdvajamo:</h2>
+    <div class="container">
+        <h2 class="section-title">Specijaliteti kuće</h2>
         
-        <div class="item">
-            <div class="item-info">
-                <strong>Teleći Ćevapi</strong>
-                <div style="font-size: 0.8rem; color: #aaa;">10 komada, somun, luk</div>
+        <div class="menu-item">
+            <div class="item-details">
+                <b>Ukus Plata (za 2 osobe)</b>
+                <span>Razne vrste mesa sa roštilja, prilog, lepinja</span>
+            </div>
+            <div class="price">35 KM</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <b>Teleći odrezak</b>
+                <span>U sosu od gljiva sa pekarskim krompirom</span>
+            </div>
+            <div class="price">22 KM</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-details">
+                <b>Sarajevski ćevapi</b>
+                <span>10 komada, domaći somun, luk, kajmak</span>
             </div>
             <div class="price">12 KM</div>
         </div>
 
-        <div class="item">
-            <div class="item-info">
-                <strong>Pizza Capricciosa</strong>
-                <div style="font-size: 0.8rem; color: #aaa;">Šunka, sir, gljive, pelat</div>
-            </div>
-            <div class="price">10 KM</div>
-        </div>
-
-        <div class="item">
-            <div class="item-info">
-                <strong>Domaća Limunada</strong>
-                <div style="font-size: 0.8rem; color: #aaa;">Svježe cijeđena, 0.3l</div>
-            </div>
-            <div class="price">4 KM</div>
-        </div>
-
-        <a href="tel:+38761123456" class="call-btn">Rezerviši stol odmah</a>
+        <h2 class="section-title">Informacije</h2>
+        <p>📍 Adresa: Industrijska zona, Tešanj</p>
+        <p>⏰ Radno vrijeme: 07:00 - 23:00</p>
     </div>
 
-    <footer style="padding: 20px; font-size: 0.8rem; color: #666;">
-        &copy; 2026 Restoran Bruda. Powered by halidomc17-ctrl
+    <div class="cta-box">
+        <a href="tel:+38732123456" class="call-btn">📞 Rezerviši stol / Naruči</a>
+    </div>
+
+    <footer style="text-align: center; padding: 40px 20px; color: #555; font-size: 0.8rem;">
+        Dizajn: halidomc17-ctrl | Tešanj 2026
     </footer>
 
 </body>
