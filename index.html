@@ -3,123 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restoran Ukus Tešanj | Tradicija i Kvalitet</title>
-    <meta name="description" content="Dobrodošli u Restoran Ukus Tešanj. Pogledajte naš digitalni meni, specijalitete sa roštilja i rezervišite svoj stol online.">
+    <title>Restoran Central Tešanj | Vaše mjesto u srcu grada</title>
+    <meta name="description" content="Dobrodošli u Restoran Central Tešanj. Uživajte u vrhunskoj hrani i ugodnom ambijentu u centru grada. Pogledajte naš meni.">
     
     <style>
         :root {
-            --gold: #d4af37;
-            --dark: #121212;
-            --light: #f4f4f4;
+            --accent: #e0e0e0; /* Srebrna */
+            --primary: #0a192f; /* Tamno plava/crna */
+            --white: #ffffff;
         }
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
-            background-color: var(--dark);
-            color: var(--light);
-            line-height: 1.6;
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
         }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80');
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80');
             background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border-bottom: 4px solid var(--gold);
+            padding: 60px 20px;
+            border-bottom: 2px solid var(--accent);
         }
-        .hero h1 { font-size: 2.5rem; margin: 0; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        
-        .container { padding: 20px; max-width: 600px; margin: auto; }
-        
-        .section-title {
-            border-bottom: 2px solid var(--gold);
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
+        h1 { font-size: 2.2rem; letter-spacing: 3px; margin: 0; color: var(--accent); }
+        .tagline { font-size: 0.9rem; letter-spacing: 5px; text-transform: uppercase; margin-top: 10px; opacity: 0.8; }
+
+        .menu-container { padding: 30px 20px; max-width: 500px; margin: auto; }
+        .section-name { font-size: 1.5rem; margin-bottom: 25px; border-bottom: 1px solid rgba(224, 224, 224, 0.2); padding-bottom: 10px; }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
-            background: #1e1e1e;
-            padding: 15px;
-            border-radius: 8px;
-            transition: 0.3s;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: left;
         }
-        .menu-item:active { transform: scale(0.98); }
-        .item-details b { display: block; font-size: 1.1rem; }
-        .item-details span { font-size: 0.8rem; color: #888; }
-        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+        .item-info b { font-size: 1.1rem; display: block; }
+        .item-info i { font-size: 0.8rem; color: #8892b0; font-style: normal; }
+        .price { font-weight: bold; font-size: 1.1rem; border-left: 2px solid var(--accent); padding-left: 10px; }
 
-        .cta-box {
-            position: sticky;
-            bottom: 20px;
-            padding: 0 20px;
-        }
-        .call-btn {
+        .btn-call {
             display: block;
-            background: var(--gold);
-            color: black;
-            text-align: center;
-            padding: 18px;
+            background: var(--white);
+            color: var(--primary);
+            padding: 20px;
+            margin: 20px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            position: sticky;
+            bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <h1>Restoran Ukus</h1>
-        <p>Tešanj • Tradicija • Kvalitet</p>
+        <h1>CENTRAL</h1>
+        <div class="tagline">Restoran & Lounge • Tešanj</div>
     </div>
 
-    <div class="container">
-        <h2 class="section-title">Specijaliteti kuće</h2>
+    <div class="menu-container">
+        <h2 class="section-name">Dnevna ponuda</h2>
         
         <div class="menu-item">
-            <div class="item-details">
-                <b>Ukus Plata (za 2 osobe)</b>
-                <span>Razne vrste mesa sa roštilja, prilog, lepinja</span>
-            </div>
-            <div class="price">35 KM</div>
-        </div>
-
-        <div class="menu-item">
-            <div class="item-details">
-                <b>Teleći odrezak</b>
-                <span>U sosu od gljiva sa pekarskim krompirom</span>
-            </div>
-            <div class="price">22 KM</div>
-        </div>
-
-        <div class="menu-item">
-            <div class="item-details">
-                <b>Sarajevski ćevapi</b>
-                <span>10 komada, domaći somun, luk, kajmak</span>
+            <div class="item-info">
+                <b>Pasta Bolognese</b>
+                <i>Domaća tjestenina, junetina, parmezan</i>
             </div>
             <div class="price">12 KM</div>
         </div>
 
-        <h2 class="section-title">Informacije</h2>
-        <p>📍 Adresa: Industrijska zona, Tešanj</p>
-        <p>⏰ Radno vrijeme: 07:00 - 23:00</p>
+        <div class="menu-item">
+            <div class="item-info">
+                <b>Biftek u sosu od bibera</b>
+                <i>Premium juneći biftek, grilovano povrće</i>
+            </div>
+            <div class="price">28 KM</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <b>Piletina sa susamom</b>
+                <i>Pržena piletina, pomfrit, tartar sos</i>
+            </div>
+            <div class="price">14 KM</div>
+        </div>
+
+        <h2 class="section-name">Gdje se nalazimo</h2>
+        <p>📍 Trg Alije Izetbegovića, Tešanj</p>
+        <p>Radno vrijeme: 08:00 - 23:00</p>
     </div>
 
-    <div class="cta-box">
-        <a href="tel:+38732123456" class="call-btn">📞 Rezerviši stol / Naruči</a>
-    </div>
+    <a href="tel:+38732123456" class="btn-call">NAZOVI ZA REZERVACIJU</a>
 
-    <footer style="text-align: center; padding: 40px 20px; color: #555; font-size: 0.8rem;">
-        Dizajn: halidomc17-ctrl | Tešanj 2026
+    <footer style="padding: 40px; font-size: 0.7rem; color: #444;">
+        &copy; 2026 RESTORAN CENTRAL. KODIRAO: HALIDOMC17-CTRL
     </footer>
 
 </body>
