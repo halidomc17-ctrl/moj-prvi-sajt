@@ -3,197 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Restaurant | Digital Experience</title>
-    <!-- Dodajemo Google Fontove za bolji izgled -->
+    <title>Barolo Jelah | Premium Experience</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --gold: #d4af37;
-            --dark: #0c0c0c;
-            --light: #f4f4f4;
-            --gray: #222;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: var(--dark);
-            color: var(--light);
-            scroll-behavior: smooth;
-        }
-
-        /* Hero Sekcija */
+        :root { --gold: #d4af37; --dark: #0c0c0c; --light: #f4f4f4; --gray: #1a1a1a; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background-color: var(--dark); color: var(--light); scroll-behavior: smooth; }
+        
         .hero {
             height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('barolo-1.jpg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
             border-bottom: 3px solid var(--gold);
         }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin: 0;
-            color: var(--gold);
-            text-transform: uppercase;
-        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; color: var(--gold); text-transform: uppercase; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); margin: 50px 0; text-align: center; }
+        
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; padding: 20px; }
+        .gallery img { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; border: 1px solid var(--gold); }
 
-        /* Grid za Menu */
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .menu-card {
-            background: var(--gray);
-            padding: 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-            border-left: 4px solid transparent;
-        }
-
-        .menu-card:hover {
-            border-left: 4px solid var(--gold);
-            transform: translateY(-5px);
-        }
-
-        .price {
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.2rem;
-            float: right;
-        }
-
-        /* Galerija */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            filter: grayscale(40%);
-        }
-
-        .gallery img:hover {
-            filter: grayscale(0%);
-        }
-
-        /* Footer i Kontakt */
-        footer {
-            background: #000;
-            padding: 50px 20px;
-            text-align: center;
-            border-top: 1px solid var(--gray);
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .btn-booking {
-            background: var(--gold);
-            color: black;
-            padding: 18px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn-booking:hover {
-            background: white;
-            box-shadow: 0 0 20px var(--gold);
-        }
+        footer { background: #000; padding: 60px 20px; text-align: center; border-top: 1px solid var(--gray); }
+        .btn-booking { background: var(--gold); color: black; padding: 18px 40px; text-decoration: none; font-weight: bold; border-radius: 50px; display: inline-block; transition: 0.3s; }
+        .btn-booking:hover { background: white; box-shadow: 0 0 20px var(--gold); }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <h1>TRATTORIA DA TOMASO</h1>
-        <p style="letter-spacing: 3px;">FINE DINING & EXQUISITE WINES</p>
-        <a href="#menu" class="btn-booking">VIEW MENU</a>
+        <h1>BAROLO JELAH</h1>
+        <p style="letter-spacing: 3px;">RESTORAN & BAR</p>
+        <a href="#gallery" class="btn-booking">POGLEDAJTE AMBIJENT</a>
     </div>
 
-    <div class="container" id="menu">
-        <h2 class="section-title">Chef's Recommendations</h2>
-        <div class="menu-grid">
-            <div class="menu-card">
-                <span class="price">$34</span>
-                <h3>Wagyu Beef Burger</h3>
-                <p>Truffle aioli, caramelized onions, aged cheddar.</p>
-            </div>
-            <div class="menu-card">
-                <span class="price">$28</span>
-                <h3>Grilled Sea Bass</h3>
-                <p>Lemon butter sauce, roasted potatoes, fresh herbs.</p>
-            </div>
-            <div class="menu-card">
-                <span class="price">$22</span>
-                <h3>Wild Mushroom Risotto</h3>
-                <p>Arborio rice, porcini mushrooms, parmesan crisp.</p>
-            </div>
+    <div class="container" id="gallery">
+        <h2 class="section-title">Vrhunski Ambijent</h2>
+        <div class="gallery">
+            <img src="barolo-2.jpg" alt="Barolo Enterijer 1">
+            <img src="barolo-3.jpg" alt="Barolo Enterijer 2">
+            <img src="barolo-1.jpg" alt="Barolo Enterijer 3">
         </div>
-    </div>
-
-    <h2 class="section-title">Atmosphere</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=400&q=60" alt="Restaurant Interior">
-        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=400&q=60" alt="Food Plate">
-        <img src="https://images.unsplash.com/photo-1550966842-2852888ad88d?auto=format&fit=crop&w=400&q=60" alt="Wine Glass">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=60" alt="Service">
     </div>
 
     <footer>
-        <div class="info-grid">
-            <div>
-                <h4>LOCATION</h4>
-                <p>Via se Castilla, 20, 20124 Milano, Italy </p>
-            </div>
-            <div>
-                <h4>HOURS</h4>
-                <p>Mon-Sun: 10:00 AM - 11:00 PM</p>
-            </div>
-            <div>
-                <h4>RESERVATIONS</h4>
-                <p>+1 (305) 555-0123</p>
-            </div>
+        <div style="margin-bottom: 30px;">
+            <h4>LOKACIJA</h4>
+            <p>Jelah Polje, 74264 Jelah</p>
+            <h4>REZERVACIJE</h4>
+            <p>+387 61 000 000</p> <!-- Ovdje možeš staviti njihov pravi broj sa Instagrama -->
         </div>
-        <a href="tel:+13055550123" class="btn-booking">CALL TO RESERVE</a>
-        <p style="margin-top: 40px; font-size: 0.8rem; color: #555;">&copy; 2026 Crafted by Halid</p>
+        <a href="tel:+38761000000" class="btn-booking">NAZOVITE ZA REZERVACIJU</a>
+        <p style="margin-top: 50px; font-size: 0.8rem; color: #555;">&copy; 2026 Developed by Halid</p>
     </footer>
 
 </body>
